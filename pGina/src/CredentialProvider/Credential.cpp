@@ -619,7 +619,7 @@ namespace pGina
 
 		PWSTR Credential::FindUsernameValue()
 		{
-			if(!m_fields) return NULL;
+			//if(!m_fields) return NULL;
 			return m_fields->fields[m_fields->usernameFieldIdx].wstr;
 		}
 
@@ -750,7 +750,8 @@ namespace pGina
 
 			// Workout what our username, and password are.  Plugins are responsible for
 			// parsing out domain\machine name if needed
-			PWSTR username = FindUsernameValue();			
+			//PWSTR username = FindUsernameValue();
+			PWSTR username = FindUsernameValue();	
 			PWSTR password = FindPasswordValue();
 			PWSTR domain = NULL;
 
